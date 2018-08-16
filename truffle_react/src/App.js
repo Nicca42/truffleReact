@@ -58,7 +58,7 @@ class App extends Component {
         simpleStorageInstance = instance
 
         // Stores a given value, 5 by default.
-        return simpleStorageInstance.set(90, {from: accounts[0]})
+        return simpleStorageInstance.set(20, {from: accounts[0]})
       }).then((result) => {
         // Get the value from the contract to prove it worked.
         return simpleStorageInstance.get.call(accounts[0])
@@ -94,7 +94,6 @@ class App extends Component {
               <h1>Good to Go!</h1>
               <p>Your Truffle Box is installed and ready.</p>
               <h2>Smart Contract Example</h2>
-              <p>If your contracts compiled and migrated successfully, below will show a stored value of 5 (by default).</p>
               <p>Try changing the value stored on <strong>line 59</strong> of App.js.</p>
               <p>The stored value is: {this.state.storageValue}</p>
               <button onClick={this.handleClick.bind(this)}>Set Storage</button>
